@@ -22,4 +22,17 @@ class LogicTest{
         }
         return $result + LogicTest::sumOfMultiples($limit, ...$multiples);
     }
+
+    /**
+     * Convierte un texto a UpperCamelCase
+     *
+     * @param string $text
+     * @return string
+     */
+    public static function toUpperCamelCase(string $text) {
+        return preg_replace('/\s+/', '', 
+            ucwords(preg_replace('/-|_|\s+/', ' ', $text))
+        );
+    }
+
 }
