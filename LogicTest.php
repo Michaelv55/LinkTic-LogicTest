@@ -35,4 +35,17 @@ class LogicTest{
         );
     }
 
+    /**
+     * Invierte los caracteres de las palabras con mas de cierta cantidad de letras
+     *
+     * @param string $text
+     * @param integer $numberOfLetters
+     * @return string
+     */
+    public static function reverseWords(string $text, int $numberOfLetters = 5){
+        return preg_replace_callback('/\b\w{'.($numberOfLetters+1).',}\b/', function($matches){
+            return strrev($matches[0]);
+        }, $text);
+    }
+
 }

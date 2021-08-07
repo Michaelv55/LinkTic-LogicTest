@@ -9,3 +9,7 @@ echo PHP_EOL;
 echo LogicTest::toUpperCamelCase('Bienvenido a_Trabajo-remoto'); //BienvenidoATrabajoRemoto
 echo PHP_EOL;
 echo LogicTest::toUpperCamelCase('bienvenido-a_ Trabajo remoto'); //BienvenidoATrabajoRemoto
+
+echo PHP_EOL;
+
+echo LogicTest::reverseWords('Bienvenido a Traba Remoto');
